@@ -1,6 +1,16 @@
-import { Container } from '@/components/Container'
+import { Container } from "../Container/Container";
+import type { FC, ReactNode } from "react";
 
-export function SimpleLayout({ title, intro, children }) {
+type SimpleLayoutProps = {
+  title: string;
+  intro: string;
+  children?: ReactNode;
+};
+export const SimpleLayout: FC<SimpleLayoutProps> = ({
+  title,
+  intro,
+  children,
+}) => {
   return (
     <Container className="mt-16 sm:mt-32">
       <header className="max-w-2xl">
@@ -11,7 +21,7 @@ export function SimpleLayout({ title, intro, children }) {
           {intro}
         </p>
       </header>
-      <div className="mt-16 sm:mt-20">{children}</div>
+      {children && <div className="mt-16 sm:mt-20">{children}</div>}
     </Container>
-  )
-}
+  );
+};
