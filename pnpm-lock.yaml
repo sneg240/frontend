@@ -134,6 +134,9 @@ importers:
       '@sneg240/tailwind':
         specifier: workspace:*
         version: link:../tailwind
+      chromatic:
+        specifier: 7.2.3
+        version: 7.2.3
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -5740,6 +5743,11 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
     dev: true
+
+  /chromatic@7.2.3:
+    resolution: {integrity: sha512-UEcHB1nkPoHWoRybPzv6BOVqPr7PqDNuz3u8NCRg7KJciouOb20HjiUQx4Dh9mgA7JUsb2WeGHE2SG/0fHH0PA==}
+    hasBin: true
+    dev: false
 
   /chrome-trace-event@1.0.3:
     resolution: {integrity: sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==}
