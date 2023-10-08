@@ -23,5 +23,6 @@
     "prettier": "3.0.3",
     "turbo": "1.10.15"
   },
+  "repository": "https://github.com/sneg240/frontend",
   "packageManager": "pnpm@8.6.10"
 }

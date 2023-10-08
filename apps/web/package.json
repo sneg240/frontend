@@ -5,11 +5,11 @@
   "type": "module",
   "sideEffect": false,
   "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "typecheck": "tsc"
+    "disabled:dev": "next dev --turbo",
+    "disabled:build": "next build",
+    "disabled:start": "next start",
+    "disabled:lint": "next lint",
+    "disabled:typecheck": "tsc"
   },
   "dependencies": {
     "@sneg240/tailwind": "workspace:*",
