@@ -19,7 +19,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 10 # 👈 Нужно что бы chromatic хорошо работал, пока пробуем глубину истории 10
 
       - uses: pnpm/action-setup@v2
 
@@ -37,3 +37,12 @@ jobs:
 
       - name: Lint & Test
         run: pnpm run check
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          workingDir: packages/ui
+          storybookBuildDir: storybook-static
+          debug: true
+          onlyChanged: true
