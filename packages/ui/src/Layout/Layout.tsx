@@ -1,7 +1,8 @@
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { Footer } from "../Footer/Footer";
+import { Header } from "../Header/Header";
+import type { FC, ReactNode } from "react";
 
-export function Layout({ children }) {
+export const Layout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <div className="fixed inset-0 flex justify-center sm:px-8">
@@ -15,5 +16,5 @@ export function Layout({ children }) {
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};

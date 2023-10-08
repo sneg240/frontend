@@ -1,7 +1,13 @@
-import Link from 'next/link'
-import clsx from 'clsx'
+import Link from "next/link";
+import clsx from "clsx";
+import type {
+  ComponentPropsWithoutRef,
+  ElementType,
+  FC,
+  ReactNode,
+} from "react";
 
-function ChevronRightIcon(props) {
+const ChevronRightIcon: FC<ComponentPropsWithoutRef<"svg">> = (props) => {
   return (
     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
       <path
@@ -11,20 +17,32 @@ function ChevronRightIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};
 
-export function Card({ as: Component = 'div', className, children }) {
+export const Card = <T extends ElementType = "div">({
+  as,
+  className,
+  children,
+}: Omit<ComponentPropsWithoutRef<T>, "as" | "className"> & {
+  as?: T;
+  className?: string;
+}) => {
+  let Component = as ?? "div";
+
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(className, "group relative flex flex-col items-start")}
     >
       {children}
     </Component>
-  )
-}
+  );
+};
 
-Card.Link = function CardLink({ children, ...props }) {
+const CardLink: FC<ComponentPropsWithoutRef<typeof Link>> = ({
+  children,
+  ...props
+}) => {
   return (
     <>
       <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
@@ -33,26 +51,38 @@ Card.Link = function CardLink({ children, ...props }) {
         <span className="relative z-10">{children}</span>
       </Link>
     </>
-  )
-}
+  );
+};
+Card.Link = CardLink;
 
-Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
+const CardTitle = <T extends ElementType = "h2">({
+  as,
+  href,
+  children,
+}: Omit<ComponentPropsWithoutRef<T>, "as" | "href"> & {
+  as?: T;
+  href?: string;
+}) => {
+  let Component = as ?? "h2";
+
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
-  )
-}
+  );
+};
+Card.Title = CardTitle;
 
-Card.Description = function CardDescription({ children }) {
+const CardDescription = ({ children }: { children: ReactNode }) => {
   return (
     <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       {children}
     </p>
-  )
-}
+  );
+};
+Card.Description = CardDescription;
 
-Card.Cta = function CardCta({ children }) {
+const CardCta = ({ children }: { children: ReactNode }) => {
   return (
     <div
       aria-hidden="true"
@@ -61,22 +91,28 @@ Card.Cta = function CardCta({ children }) {
       {children}
       <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
     </div>
-  )
-}
+  );
+};
+Card.Cta = CardCta;
 
-Card.Eyebrow = function CardEyebrow({
-  as: Component = 'p',
+const CardEyebrow = <T extends ElementType = "p">({
+  as,
   decorate = false,
   className,
   children,
   ...props
-}) {
+}: Omit<ComponentPropsWithoutRef<T>, "as" | "decorate"> & {
+  as?: T;
+  decorate?: boolean;
+}) => {
+  let Component = as ?? "p";
+
   return (
     <Component
       className={clsx(
         className,
-        'relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500',
-        decorate && 'pl-3.5'
+        "relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500",
+        decorate && "pl-3.5",
       )}
       {...props}
     >
@@ -90,5 +126,6 @@ Card.Eyebrow = function CardEyebrow({
       )}
       {children}
     </Component>
-  )
-}
+  );
+};
+Card.Eyebrow = CardEyebrow;
