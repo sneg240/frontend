@@ -1,0 +1,8 @@
+{
+  "name": "@sneg240/tsconfig",
+  "type": "module",
+  "sideEffect": false,
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "extends": "@sneg240/tsconfig/react-library.json",
+  "include": [".", "./.storybook"],
+  "compilerOptions": {
+    "module": "esnext"
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}

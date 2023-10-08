@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "check": "turbo run check",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "commit": "commit",
+    "generate:package": "turbo gen workspace --copy @sneg240/package --destination packages --type package",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@sneg240/eslint-config-custom": "workspace:*",
+    "@turbo/gen": "1.10.15",
+    "@commitlint/cli": "17.7.2",
+    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/prompt-cli": "17.7.2",
+    "husky": "8.0.3",
+    "eslint": "8.51.0",
+    "prettier": "3.0.3",
+    "turbo": "1.10.15"
+  },
+  "packageManager": "pnpm@8.6.10"
+}

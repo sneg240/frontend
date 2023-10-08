@@ -1,0 +1,18 @@
+{
+  "name": "@sneg240/package",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\"",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@sneg240/eslint-config-custom": "workspace:*",
+    "@sneg240/tsconfig": "workspace:*",
+    "eslint": "8.51.0",
+    "typescript": "5.2.2"
+  }
+}
