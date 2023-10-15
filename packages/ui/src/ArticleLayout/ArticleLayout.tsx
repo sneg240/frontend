@@ -12,23 +12,14 @@ export function formatDate(dateString: string) {
   });
 }
 
-interface Article {
-  title: string;
-  description: string;
-  author: string;
-  date: string;
-}
-
-export interface ArticleWithSlug extends Article {
-  slug: string;
-}
-
 type ArticleLayoutProps = {
-  article: ArticleWithSlug;
+  title: string;
+  date: string;
   children: React.ReactNode;
 };
 export const ArticleLayout: FC<ArticleLayoutProps> = ({
-  article,
+  title,
+  date,
   children,
 }) => {
   return (
@@ -39,14 +30,14 @@ export const ArticleLayout: FC<ArticleLayoutProps> = ({
           <article>
             <header className="flex flex-col">
               <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                {article.title}
+                {title}
               </h1>
               <time
-                dateTime={article.date}
+                dateTime={date}
                 className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                <span className="ml-3">{formatDate(article.date)}</span>
+                <span className="ml-3">{formatDate(date)}</span>
               </time>
             </header>
             <Prose className="mt-8" data-mdx-content>
