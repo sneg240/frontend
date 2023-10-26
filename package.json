@@ -16,7 +16,7 @@
     "@sneg240/eslint-config-custom": "workspace:*",
     "@turbo/gen": "1.10.15",
     "@commitlint/cli": "17.7.2",
-    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/config-conventional": "18.1.0",
     "@commitlint/prompt-cli": "17.7.2",
     "husky": "8.0.3",
     "eslint": "8.51.0",
