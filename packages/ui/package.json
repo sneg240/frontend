@@ -20,7 +20,7 @@
     "@sneg240/tailwind": "workspace:*",
     "clsx": "2.0.0",
     "next": "13.5.4",
-    "chromatic": "7.3.0",
+    "chromatic": "7.6.0",
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
