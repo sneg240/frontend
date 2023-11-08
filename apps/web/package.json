@@ -15,7 +15,7 @@
     "@sneg240/tailwind": "workspace:*",
     "@sneg240/ui": "workspace:*",
     "@types/node": "20.8.5",
-    "@types/react": "18.2.25",
+    "@types/react": "18.2.37",
     "@types/react-dom": "18.2.13",
     "autoprefixer": "10.4.16",
     "clsx": "2.0.0",
@@ -31,7 +31,7 @@
     "@sneg240/eslint-config-custom": "workspace:*",
     "@sneg240/tsconfig": "workspace:*",
     "@types/node": "20.8.5",
-    "@types/react": "18.2.17",
+    "@types/react": "18.2.37",
     "@types/react-dom": "18.2.13",
     "typescript": "5.1.6"
   },
