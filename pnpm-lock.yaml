@@ -135,8 +135,8 @@ importers:
         specifier: workspace:*
         version: link:../tailwind
       chromatic:
-        specifier: 7.3.0
-        version: 7.3.0
+        specifier: 10.0.0
+        version: 10.0.0
       clsx:
         specifier: 2.0.0
         version: 2.0.0
@@ -5746,8 +5746,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chromatic@7.3.0:
-    resolution: {integrity: sha512-pXLCQmEFDRMbALSzSomJmvG3Qi2RSsiA7r4xAZ2ZeJkdR5Rr6vljyNYuGQHG4ccIWnrlM40xMLb5kzVrJrBBAg==}
+  /chromatic@10.0.0:
+    resolution: {integrity: sha512-RLU/Y0FdYVnPJIhm/gG3CSJO1hKg2O/nvfutyWT88Tg2o4aIGqSrQKCBiAUAHKrQKpfF+9Dvn/oHRTPtRcinHA==}
     hasBin: true
     dev: false
 
