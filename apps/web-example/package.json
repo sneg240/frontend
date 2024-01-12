@@ -15,7 +15,7 @@
     "@sneg240/ui": "workspace:*"
   },
   "devDependencies": {
-    "@types/node": "20.8.5",
+    "@types/node": "20.11.0",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.13",
     "@sneg240/eslint-config-custom": "workspace:*",
